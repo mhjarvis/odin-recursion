@@ -40,7 +40,13 @@ function fibsRec(n) {
   if(n == 1) return [0];
   if(n == 2) return [0, 1];
 
+
   let a = fibsRec(n - 1);
   a.push(a[n - 2] + a[n - 3]);
   return a;  
+
+  // One line solution, takes significantly longer than the above solution
+
+/*   return [...fibsRec(n - 1), fibsRec(n - 1)[n - 2] + fibsRec(n - 1)[n - 3]];
+ */
 }
