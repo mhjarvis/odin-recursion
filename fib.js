@@ -36,5 +36,11 @@ console.log('A Fibonacci Sequence of 10 gives us: ' + fibsRec(10));
 console.log('A Fibonacci Sequence of 20 gives us: ' + fibsRec(20));
 
 function fibsRec(n) {
-  return fibs(n);
+  if(n == 0) return [];
+  if(n == 1) return [0];
+  if(n == 2) return [0, 1];
+
+  let a = fibsRec(n - 1);
+  a.push(a[n - 2] + a[n - 3]);
+  return a;  
 }
