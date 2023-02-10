@@ -27,3 +27,4 @@ function fibs(n) {
   return arr;
 }
 
+console.log('SOLUTION 2: RECURSIVE FIBONACCI SEQUENCE');
