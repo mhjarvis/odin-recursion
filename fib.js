@@ -1,12 +1,17 @@
 console.log('test');
-console.log(fibo(5));
+fibs(5);
 
-function fibo(n) {
+function fibs(n) {
 
-  if(n <= 2) return n;
+  let arr = [];
 
-  return n + fibo(n - 1);
+  if(n > 1) {
+    arr.push(n);
+    fibs(n - 1);
+  }
   
+  console.log(arr);
+  return arr;
 }
 
 
