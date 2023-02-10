@@ -1,17 +1,18 @@
 console.log('test');
-fibs(5);
+console.log(fibs(6));
 
+// function that returns n numbers of the fibbonaci sequnce
 function fibs(n) {
 
-  let arr = [];
+let first = 0;
+let second = 1;
+let arr = [];
 
-  if(n > 1) {
-    arr.push(n);
-    fibs(n - 1);
-  }
-  
-  console.log(arr);
-  return arr;
+for(let i = 0; i < n ; i++) {
+  arr.push(i);
+}
+
+return arr;
 }
 
 
